@@ -8,14 +8,14 @@ import (
 )
 
 type RedisSync struct {
-	Opt   *Option
+	Opt   *Options
 	Redis *redis.Client
 }
 
 type redisMutex struct {
 	sessionID  string
 	key        string
-	opt        *Option
+	opt        *Options
 	redis      *redis.Client
 	lockCtx    context.Context
 	lockCancel context.CancelFunc
